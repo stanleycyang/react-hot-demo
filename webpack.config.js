@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 module.exports = {
     context: __dirname,
     entry: {
@@ -19,7 +20,13 @@ module.exports = {
             {
                 test: /.html$/,
                 loader: 'file?name=[name].[ext]'
+            },
+            {
+                test: /.css$/, loader: 'style!css'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.NoErrorsPlugin()
+    ]
 }

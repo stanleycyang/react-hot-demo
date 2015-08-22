@@ -1,7 +1,8 @@
 import React from 'react';
-import Greeting from './components/Greeting';
+import Router from 'react-router';
+import ChatApp from './components/Chat';
 
 React.render(
-  <Greeting name='World'/>,
+  <ChatApp name='Stanley'/>,
   document.body
 );
